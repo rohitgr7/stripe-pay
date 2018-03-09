@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Payment from './components/Payment';
 import Header from './components/Header';
+import Login from './components/Login';
 import { fetchUser } from './actions';
 
 class App extends Component {
@@ -14,14 +14,18 @@ class App extends Component {
     return (
       <div>
         <Header />
-        {this.props.user ? <Payment /> : <a href="/auth/google">Login</a>}
+        <br />
+        <br />
+        <br />
+        <br />
+        <div className="container">
+          <div className="d-flex justify-content-center">
+            <Login />
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ user }) => {
-  return { user };
-};
-
-export default connect(mapStateToProps, { fetchUser })(App);
+export default connect(null, { fetchUser })(App);

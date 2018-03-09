@@ -11,5 +11,6 @@ export default () => {
     {},
     composeEnhancer(applyMiddleware(thunk))
   );
+
   return store;
 };

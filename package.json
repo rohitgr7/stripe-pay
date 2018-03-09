@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.2",
     "bootstrap": "^4.0.0",
     "compression": "^1.7.2",
@@ -41,6 +42,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"npm run dev-server\" \"npm run client\""
+    "dev": "concurrently \"npm run dev-server\" \"npm run client\"",
+    "heroku-postbuild": "npm sun build"
   }
 }
