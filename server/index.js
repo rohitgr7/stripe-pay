@@ -4,6 +4,7 @@ const compression = require('compression');
 const helmet = require('helmet');
 const session = require('express-session');
 const passport = require('passport');
+const path = require('path');
 
 const { sessionSecret } = require('./config');
 require('./database/dbConfig');
