@@ -4,7 +4,9 @@ const googleAuthentication = passport.authenticate('google', {
   scope: ['profile', 'email']
 });
 
-const googleAuthenticated = passport.authenticate('google');
+const googleAuthenticated = passport.authenticate('google', {
+  failureRedirect: '/'
+});
 
 const requireLogin = (req, res, next) => {
   if (!req.user) {

@@ -8,11 +8,11 @@ import configureStore from './store';
 
 const store = configureStore();
 
-const jsx = (
+const Root = () => (
   <Provider store={store}>
     <App />
   </Provider>
 );
 
-ReactDOM.render(jsx, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
 registerServiceWorker();
