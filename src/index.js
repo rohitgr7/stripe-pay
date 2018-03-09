@@ -15,7 +15,7 @@ const store = configureStore();
 const Root = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <Route path="/" component={App} />
+      <Route path="/" component={App} exact />
     </BrowserRouter>
   </Provider>
 );

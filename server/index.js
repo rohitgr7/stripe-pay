@@ -20,8 +20,8 @@ console.log('keys', keys);
 const app = express();
 
 // Middlewares
-app.use(compression());
-app.use(helmet());
+// app.use(compression());
+// app.use(helmet());
 app.use(bodyParser.json());
 
 // Express-session Middleware
