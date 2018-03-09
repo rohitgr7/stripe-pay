@@ -20,24 +20,30 @@ const googleStrategy = new GoogleStrategy(
     done
   ) => {
     try {
+      console.log('passport init.........');
       const existingUser = await User.findOne({ googleId });
       if (existingUser) {
+        console.log('user exists................');
         done(null, existingUser);
       } else {
+        console.log('creating new user.............');
         const newUser = await new User({ name, googleId }).save();
         done(null, newUser);
       }
     } catch (e) {
+      console.log('passport catch error..........');
       throw e;
     }
   }
 );
 
 passport.serializeUser((user, done) => {
+  console.log('serializeUser................');
   done(null, user.id);
 });
 
 passport.deserializeUser((id, done) => {
+  console.log('deserializeUser..................');
   User.findById(id).then(user => done(null, user));
 });
 

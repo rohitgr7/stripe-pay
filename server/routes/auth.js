@@ -11,6 +11,7 @@ const {
 router.get('/google', googleAuthentication);
 
 router.get('/google/callback', googleAuthenticated, (req, res) => {
+  console.log('google callback route........................');
   res.redirect('/');
 });
 
