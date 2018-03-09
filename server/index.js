@@ -36,10 +36,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+console.log('using the auth route...............');
 // Routes
 app.use('/auth', auth);
 app.use('/api', api);
 
+console.log('express static....................');
 // Express static config
 if (process.env.NODE_ENV === 'production') {
   const publicPath = path.join(__dirname, '..', 'build');

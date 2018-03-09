@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const passport = require('passport');
 
+console.log('auth Router....................');
+
 require('./../services/googleLogin');
 const {
   googleAuthentication,
@@ -16,6 +18,8 @@ router.get('/google/callback', googleAuthenticated, (req, res) => {
 });
 
 router.get('/user', (req, res) => {
+  console.log('requesting the user.......');
+  console.log('user:', req.user);
   res.send(req.user);
 });
 
