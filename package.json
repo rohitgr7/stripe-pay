@@ -10,6 +10,11 @@
       "target": "http://localhost:5000"
     }
   },
+  "engines": {
+    "node": "8.4.0",
+    "npm": "5.6.0",
+    "yarn": "1.3.2"
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
@@ -43,6 +48,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "dev": "concurrently \"npm run dev-server\" \"npm run client\"",
-    "heroku-postbuild": "npm sun build"
+    "heroku-postbuild": "npm run build"
   }
 }
