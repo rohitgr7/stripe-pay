@@ -11,10 +11,7 @@ class Login extends Component {
         return;
       case false:
         return (
-          <a
-            className="btn btn-danger btn-lg"
-            href="https://pay-stripe.herokuapp.com/auth/google"
-          >
+          <a href="/auth/google" className="btn btn-danger btn-lg">
             Login
           </a>
         );
@@ -24,10 +21,7 @@ class Login extends Component {
             <h1>Credits: {user.credits}</h1>
             <br />
             <Payment />
-            <a
-              className="btn btn-danger btn-lg ml-2"
-              href="https://pay-stripe.herokuapp.com/auth/logout"
-            >
+            <a href="/auth/logout" className="btn btn-danger btn-lg ml-2">
               Logout
             </a>
           </div>
