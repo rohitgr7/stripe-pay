@@ -3,6 +3,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 const User = require('mongoose').model('users');
 const { googleClientID, googleClientSecret } = require('./../config');
+console.log('env in services: ', process.env.NODE_ENV);
 
 const googleStrategyOptions = {
   clientID: googleClientID,

@@ -11,6 +11,10 @@ require('./database/dbConfig');
 require('./models/user');
 const auth = require('./routes/auth');
 const api = require('./routes/payment');
+const keys = require('./config'); //remove it after debugging
+
+console.log('env in index: ', process.env.NODE_ENV);
+console.log('keys', keys);
 
 // Express Instance
 const app = express();
